@@ -55,6 +55,7 @@ a:link{
     background-color: transparent;
     text-decoration: none;
     margin:auto;
+    font-size: clamp(1rem, 2vw, 2rem);
   }
 
 a:visited{
