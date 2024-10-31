@@ -76,7 +76,13 @@ a:active{
   position: relative;
   height: 100%;
   width: 100%;
-  background-color: aliceblue;
+  animation: gra 10s pause 20s 5s steps(1) infinite;
+  
+    animation-direction: reverse;
+    -webkit-animation: gra 500ms infinite;
+    -webkit-animation-direction:alternate-reverse;
+    animation-timing-function: linear;
+    -webkit-animation-timing-function: linear;
   clip-path: polygon(
     8% 0%, 41% 0%, 41% 0%, 42% 28%, 
     42% 28%, 91% 70%, 91% 70%, 91% 71%, 
@@ -129,3 +135,20 @@ a:active{
     6% 10%, 7% 10%, 7% 10%, 7% 9%, 
     7% 9%, 8% 7%, 8% 7%, 8% 5%, 8% 5%);
 }
+@keyframes gra {
+    0% {
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #696563), color-stop(21%, #696563), color-stop(56%, #ffffff), color-stop(88%, #4b584f));
+      background: -webkit-linear-gradient(-45deg, #696563 0%, #696563 21%, #ffffff 56%, #4b584f 88%);
+      background: linear-gradient(135deg, #696563 0%, #696563 21%, #ffffff 56%, #4b584f 88%);
+    }
+    50% {
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #696563), color-stop(10%, #696563), color-stop(40%, #ffffff), color-stop(60%, #4b584f));
+      background: -webkit-linear-gradient(-45deg, #696563 0%, #696563 10%, #ffffff 40%, #4b584f 60%);
+      background: linear-gradient(135deg, #696563 0%, #696563 10%, #ffffff 40%, #4b584f 60%);
+    }
+    100% {
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #696563), color-stop(5%, #696563), color-stop(10%, #ffffff), color-stop(40%, #4b584f));
+      background: -webkit-linear-gradient(-45deg, #696563 0%, #696563 5%, #ffffff 10%, #4b584f 40%);
+      background: linear-gradient(135deg, #696563 0%, #696563 5%, #ffffff 10%, #4b584f 40%);
+    }
+  }
