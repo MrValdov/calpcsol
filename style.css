@@ -74,8 +74,8 @@ a:active{
 }
 .california{
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: 100px;
+  width: 100px;
   animation: gra 10s pause 20s 5s steps(1) infinite;
   
     animation-direction: reverse;
